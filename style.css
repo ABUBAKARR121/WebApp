@@ -1,0 +1,76 @@
+/* Basic styling and variables for light/dark mode */
+:root {
+    --bg-color: #f0f2f5;
+    --text-color: #333;
+    --container-bg: #ffffff;
+    --btn-bg: #007bff;
+    --btn-hover: #0056b3;
+}
+
+body.dark-mode {
+    --bg-color: #18191a;
+    --text-color: #e4e6eb;
+    --container-bg: #242526;
+    --btn-bg: #3a3b3c;
+    --btn-hover: #4e4f50;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    background-color: var(--container-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+#counter-display {
+    font-size: 5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #28a745; /* Green color for the number */
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background-color: var(--btn-hover);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.theme-btn {
+    background-color: #6c757d;
+    font-size: 1rem;
+    padding: 10px 15px;
+}
